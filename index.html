@@ -8,12 +8,33 @@
 		<title>设置</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 		<style type="text/css">
-			#startTime{
-				border: 1px solid black;
-			}
+			select{color:gray;}
 		</style>
 	</head>
 	<body>
-		<div>时间：<input type="datetime-local" id="startTime"></input></div>
+		<select dir="rtl">
+		  <option value ="未设置">未设置</option>
+		  <option value ="2">2</option>
+		  <option value="4">4</option>
+		  <option value="6">6</option>
+		  <option value ="8">8</option>
+		  <option value="10">10</option>
+		  <option value="12">12</option>
+		  <option value ="14">14</option>
+		  <option value="16">16</option>
+		  <option value="18">18</option>
+		  <option value ="20">20</option>
+		  <option value="22">22</option>
+		  <option value="24">24</option>
+		</select>
 	</body>
+	<script type="text/javascript">
+		$("select").click(function(){
+			if ($(this).val()!="未设置") 	{
+				$(this).css({"color":"black"});
+			}else{
+				$(this).css({"color":"gray"});
+			}
+		})
+	</script>
 </html>
